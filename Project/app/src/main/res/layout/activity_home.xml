@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/women"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="For Woman"
+            android:layout_marginTop="300dp"
+            style="@style/Text"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Woman_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/Explore"
+            style="@style/Button"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="705dp"
+        android:layout_height="453dp"
+        android:layout_gravity="center"
+        android:background="@drawable/man"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="300dp"
+            android:text="For Man"
+            style="@style/Text"
+
+
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Man_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/Explore"
+            style="@style/Button"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="705dp"
+        android:layout_height="453dp"
+        android:layout_gravity="center"
+        android:background="@drawable/body"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="300dp"
+            android:text="Gift Set"
+            style="@style/Text"
+
+
+
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Body_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/Explore"
+            style="@style/Button"
+
+
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Cart">
+
+    <!-- Your existing layout -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/Cart_Image"
+            android:layout_width="189dp"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/CartName"
+            android:layout_toRightOf="@+id/Cart_Image"
+            android:layout_margin="10dp"
+            android:text="Name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/CartPrice"
+            android:layout_below="@+id/CartName"
+            android:layout_toRightOf="@+id/Cart_Image"
+            android:layout_marginLeft="10dp"
+            android:text="Price" />
+
+
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/plus"
+            android:id="@+id/plus"
+            android:layout_below="@id/CartPrice"
+            android:layout_toRightOf="@+id/Cart_Image"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/quantity"
+            android:layout_below="@+id/plus"
+            android:layout_toRightOf="@+id/Cart_Image"
+            android:text="1"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp" />
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/minus"
+            android:id="@+id/minus"
+            android:layout_below="@id/quantity"
+            android:layout_toRightOf="@+id/Cart_Image"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <ImageButton
+            android:id="@+id/Cart_Delete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/minus"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-45dp"
+            android:layout_toRightOf="@id/Cart_Image"
+
+            android:background="@drawable/delete" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

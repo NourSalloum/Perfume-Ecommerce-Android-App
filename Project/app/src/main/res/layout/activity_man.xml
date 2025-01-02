@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Man"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NavigationBar"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/layout1"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="10dp"
+        >
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/home"
+            android:layout_marginRight="40dp"
+            android:id="@+id/HomeButton"
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/search"
+            android:layout_marginRight="40dp"
+            android:id="@+id/Search"
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/trolley"
+            android:layout_marginRight="40dp"
+            android:id="@+id/CartPage"
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/profile"
+            android:layout_marginRight="40dp"
+            android:id="@+id/Profile"
+            />
+
+
+
+
+
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="250dp"
+        android:layout_marginLeft="50dp"
+        android:layout_height="wrap_content"
+        android:hint="Search perfumes..."
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_marginTop="50dp"
+        android:padding="20dp"
+        android:background="@drawable/form"
+        android:singleLine="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RecyclerView"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/searchEditText"
+        />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/layout1"
+        android:id="@+id/AddPerfume"
+        />
+</RelativeLayout>

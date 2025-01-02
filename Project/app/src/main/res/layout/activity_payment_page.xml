@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentPage"
+    >
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/arrow"
+        android:id="@+id/Back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:id="@+id/Payment"
+        android:layout_marginLeft="100dp"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Name"
+        android:background="@drawable/form"
+        android:layout_marginTop="40dp"
+        android:padding="8dp"
+        android:layout_below="@+id/Payment"
+        android:hint="Name"
+        android:drawableLeft="@drawable/human"
+        android:drawablePadding="6dp"
+       />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Phone"
+        android:background="@drawable/form"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/Name"
+        android:padding="8dp"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:drawableLeft="@drawable/phone"
+        android:drawablePadding="6dp"
+       />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Address"
+        android:background="@drawable/form"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/Phone"
+        android:padding="8dp"
+        android:hint="Address"
+        android:drawableLeft="@drawable/address"
+        android:drawablePadding="6dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/CardNumber"
+        android:background="@drawable/form"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/Address"
+        android:padding="8dp"
+        android:hint="Card Number"
+        android:drawableLeft="@drawable/creditcard"
+        android:inputType="number"
+        android:drawablePadding="6dp"
+       />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/CardHolder"
+        android:background="@drawable/form"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/CardNumber"
+        android:padding="8dp"
+        android:hint="Cardholder Name"
+        android:drawableLeft="@drawable/holder"
+        android:drawablePadding="6dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/CardCode"
+        android:background="@drawable/form"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/CardHolder"
+        android:padding="8dp"
+        android:hint="Security Code"
+        android:drawableLeft="@drawable/securitycode"
+        android:inputType="number"
+        android:maxLength="3"
+        android:drawablePadding="6dp"
+        />
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="10dp"
+         android:layout_marginTop="20dp"
+         android:textSize="15dp"
+         android:id="@+id/Month"
+         android:text="Expiry Month"
+         android:textStyle="bold"
+         android:layout_below="@+id/CardCode"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/Month"
+            android:id="@+id/Year"
+            android:layout_below="@+id/CardCode"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="Expiry Year"/>
+
+
+    <Spinner
+        android:id="@+id/spinnerExpiryMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/Month"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/form"
+        android:padding="8dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:entries="@array/months_array"/>
+
+    <Spinner
+        android:id="@+id/spinnerExpiryYear"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Year"
+         android:layout_marginLeft="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/spinnerExpiryMonth"
+        android:background="@drawable/form"
+        android:entries="@array/years_array"
+        android:padding="8dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/Pay"
+        android:text="Pay"
+        android:layout_below="@+id/spinnerExpiryYear"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="100dp"/>
+
+</RelativeLayout>
